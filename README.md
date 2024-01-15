@@ -1,3 +1,9 @@
+1/15/2024 corrected the outputs for the following in Pypoll and resubmitted assignment:
+
+The correct results are not printed in the terminal (Pypoll)
+The winner was hard coded 
+In the assignment a few of the requirements were not successfully met: added script for calculating winner, added script for creating candidate list 
+
 Create two outputs and save outputs to files:
 
 PyBank: create a financial analysis that calculates the following items:
@@ -14,9 +20,6 @@ code sources:
 *changes in profit/losses for entire period created with tutor David Chao
 *print output f statement created with tutor David Chao
 
-
-
-
 PyPoll: create a modern vote-counting process that includes the following items:
     Total number of votes casts
     List of candidates who received votes
@@ -24,6 +27,8 @@ PyPoll: create a modern vote-counting process that includes the following items:
     Total number of votes each candidate won
     The winner of the election
 code sources:
-*get candidate names and count votes: used chatgpt to debug and recommend improvements, my variables)
-*Who received the most votes(winner) sourced [[from Google])(https://stackoverflow.com/questions/2474015/getting-the-index-of-the-returned-max-or-min-item-using-max-min-on-a-list
+*get candidate names and count votes: Reference list: ChatGPT. (2024, January 01). How do you use for loops. [Response to user question]. Retrieved from [https://chat.openai.com/].
+
+*Who received the most votes - Reference list: ChatGPT. (2024, January 15). How do you create an output with a winner. [Response to user question]. Retrieved from [https://chat.openai.com/].
+
 *print output f statement created with tutor David Chao in PyBank challenge
