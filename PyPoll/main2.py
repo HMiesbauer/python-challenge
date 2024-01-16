@@ -7,10 +7,7 @@ doane_votes = 0
 stockham_percentage = 0
 deGette_percentage = 0
 doane_percentage = 0
-candidate_name = ""
-vote_percentage = 0
-candidate_votes = [] # list to get the votes per candidate
-winner = ""
+
 
 #I have 3 columns so index 0, 1, 2
 import csv
@@ -25,17 +22,15 @@ with open(election_data_csv) as csv_file:
 #skip header row
     header = next(election_results)
 
-#calculate total votes cast this works
+#calculate total votes cast
    
     for row in election_results:
         total_votes_cast +=1
 
-#get list of candidates who got votes - this doesnt work need list comphrehsion
-        candidate_name = row[2]
-        candidate_list.append(candidate_name)
-    print(candidate_list)
+#get list of candidates who got votes 
+
             
-# get candidate names and count votes using a loop put totals into the variables(for loop code from chatgpt, my variables)
+# get candidate names and count votes using a loop so can use vote counts for variables in print statement(for loop code from chatgpt, my variables)
 with open(election_data_csv) as csv_file:
     election_results = csv.reader(csv_file)
     header = next(election_results)
@@ -54,20 +49,21 @@ with open(election_data_csv) as csv_file:
     deGette_percentage = (deGette_votes / total_votes_cast) * 100
     doane_percentage = (doane_votes / total_votes_cast) * 100
 
-#Who received the most votes(winner)  - same code from line 36 just add in print statement for winner using max value from winner list 
-                    
+#Who received the most votes(winner)  
+candidate_list_votes = [(stockham_votes), (deGette_votes), (doane_votes)] # list to get the candidate votes but need to pair with names
+most_votes = candidate_list_votes.index(max(candidate_list_votes))
+winner = candidate_list_votes[most_votes] 
+print(winner)
 
-
-
-#print output
+#print output f statement from PyBank created with tutor David Chao
 output = f"""
 Election Results
 -------------------------
 Total Votes: {total_votes_cast:,}
 -------------------------
-Charles: {stockham_percentage} {stockham_votes}
-Diane: {deGette_percentage} {deGette_votes}
-Anthony: {doane_percentage} {doane_votes}
+Charles Casper Stockham: {stockham_percentage:.2f}% ({stockham_votes})
+Diana DeGette: {deGette_percentage:.2f}% ({deGette_votes})
+Raymon Anthony Doane: {doane_percentage:.2f}% ({doane_votes})
 -------------------------
 Winner: Diana DeGette
 -------------------------

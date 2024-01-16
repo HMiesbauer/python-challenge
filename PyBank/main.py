@@ -29,7 +29,7 @@ with open(budget_data_csv) as csv_file:
     months_sum += 1
     previous_profit = int(January_list[1])
 
-#calculate net total amount of profit/losses for the entire period 
+#calculate net total amount of profit/losses for the entire period created with tutor David Chao
     for row in budget:
         profit_sum = profit_sum + int(row[1])
         months_sum += 1
@@ -41,7 +41,7 @@ with open(budget_data_csv) as csv_file:
 
         previous_profit = current_profit
 
-#changes in profit/losses for entire period
+#changes in profit/losses for entire period created with tutor David Chao
         if change > greatest_increase:
             greatest_increase = change
             greatest_increase_month = row[0]
@@ -59,15 +59,15 @@ with open(budget_data_csv) as csv_file:
             greatest_decrease = change
             greatest_decrease_month = row[1]
          
-#print output 
+#print output f statement created with tutor David Chao
 output = f"""   
 Financial Analysis
 ----------------------------
 Total Months: {months_sum}
 Total: ${profit_sum:,}
 Average Change: ${total_change/change_count:.2f}
-Greatest Increase in Profits: {greatest_increase_month} ${greatest_increase}
-Greatest Decrease in Profits: {greatest_decrease_month} ${greatest_decrease}
+Greatest Increase in Profits: {greatest_increase_month} ${greatest_increase:,}
+Greatest Decrease in Profits: {greatest_decrease_month} ${greatest_decrease:,}
 """
 
 print(output)
